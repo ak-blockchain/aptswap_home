@@ -1,0 +1,122 @@
+<html>
+    <head>
+  
+      <style>
+        body {
+          background-color: #363435; /*#FFFAEF;*/
+          font-family: "Avenir";
+          color:rgba(0, 0, 0, 0.7);
+          justify-content: center;
+          display: flex;
+        }
+
+        #mainWelcome {
+            position: absolute; 
+            left: 50%; 
+            transform:translateX(-50%);
+            top: 220px;
+            white-space: nowrap;
+            font-size: 2.4em;
+            color: #2FD9A7;
+        }
+        #tagline {
+            position: absolute; 
+            left: 50%; 
+            transform:translateX(-50%);
+            top: 310px;
+            font-size: 1.2em;
+            text-align: center;
+            color: white;
+        }
+        #mainImg {
+            position: absolute; 
+            left: calc(50%);
+            top: 50px; 
+            height: 220px;
+            /*
+            animation-name: floating;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            */
+
+            transform:translateX(-50%);
+        }
+        /*
+        @keyframes floating {
+            from { transform: translate(0,  0px); }
+            65%  { transform: translate(0, 10px); }
+            to   { transform: translate(0, -0px); }    
+        }*/
+
+        .externalLink {
+            position: absolute; 
+            width: 200px;
+            height: 20px;
+            border: 2px solid #2FD9A7; 
+            background-color: #01FDFE; 
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            padding: 12px;
+            font-weight: 700;
+        }
+        .externalLink:hover {
+            background-color: #d0edfd9b;
+            cursor: pointer;
+        }
+        #app {
+            top: 430px;
+        }
+        #twitter {
+            top: 500px;
+        }
+        #telegram {
+            top: 570px;
+        }  
+        #chart {
+            top: 640px;
+        } 
+
+        #footerinfo {
+            position: absolute; 
+            bottom: -15px;
+            font-size: 0.9em;
+            left: 10px;
+        }
+  
+      </style>
+    <title>AptSwap Home</title>
+
+    </head>
+    <body>
+    <img id="mainImg" src="./aptswap.jpg">
+    <h5 id="mainWelcome">Welcome to AptSwap</h5>
+    <h4 id="tagline">The Ecosystem of Aptos</h4>
+    <div class="externalLink" id="app">
+        Presale
+    </div>
+    <div class="externalLink" id="twitter">
+        Twitter
+    </div>
+    <div class="externalLink" id="telegram">
+        Telegram 
+    </div>
+    <div class="externalLink" id="chart">
+        Swap 
+    </div>
+
+    <h6 id="footerinfo"><a style="color:rgba(0, 0, 0, 0.7)" href=""></a> </h6>
+      <script>
+        document.getElementById("app").onclick = function() { goExternalLink("https://presale.aptswap.io"); };;
+        document.getElementById("twitter").onclick = function() { goExternalLink("https://aptogeaptos"); }; 
+        document.getElementById("telegram").onclick = function() { goExternalLink("https://t.me/Aptoge"); };
+        document.getElementById("chart").onclick = function() { goExternalLink("https://swap.aptswap.io"); };
+      
+        function goExternalLink(link) {
+            window.open(link, "_blank");
+        }
+      </script>
+
+    </body>
+  </html>
